@@ -5,4 +5,4 @@
 
 - [ ] map 
 - [ ] character
-- [X] storyline : https://www.notion.so/refilwe-m/Mchele-Game-Story-Line-9e7662db8ac84bab98ff8d86abe5932e?pvs=4
+- [X] storyline : [Notion Story Line Notes](https://refilwe-m.notion.site/Mchezo-Game-Story-Line-9e7662db8ac84bab98ff8d86abe5932e)
