@@ -3,6 +3,6 @@
 
 ## TODO
 
-[ ] map 
-[ ] character
-[ ] storyline
+- [ ] map 
+- [ ] character
+- [ ] storyline
