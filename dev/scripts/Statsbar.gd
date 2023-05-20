@@ -48,6 +48,10 @@ func _process(delta):
 		
 	# set mission question
 	qnLbl.text = Global.qn_type + ": \n" + Global.curr_question
+	$Panel/updates.text = Global.updateLbl
+	$Panel/score.text = "Score: " + str(Global.score)
+	$Panel/powerups.text = "Power-ups: " + str(Global.power_ups)
+	$Panel/questions.text = "Questions: " + str(Global.questions_complete) + "/" + str(Global.total_questions)
 
 func toggle_pause():
 	if Global.is_paused:

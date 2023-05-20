@@ -6,7 +6,7 @@ var original_pos
 func _ready():
 	$description.visible = false
 	original_pos = self.position
-	print(original_pos)
+	# print(original_pos)
 
 func _process(delta):
 	toggle_lamp()

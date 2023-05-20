@@ -3,9 +3,11 @@ extends Node
 # player stats
 var score = 0
 var timer_mins = 1
-var questions_left
+var questions_complete = 0
 var power_ups = 0 
 
+# status lbl
+var updateLbl = "Status: Exploring"
 
 var arrow_follow = Vector2(0, 0) # default
 
@@ -22,6 +24,8 @@ var questions = [
 ]
 
 var hide_qnLbl: bool = false
+
+var total_questions = 3
 var qn_type = "Mission"
 var intial_question = "go to the station post to get your first assignment"
 var curr_question
