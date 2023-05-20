@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://asserts/img/pixel-art-video-games-architecture-png-favpng-bcctUuzq1m7j5ckb6gKWHtzRx.jpg" type="Texture" id=1]
+[ext_resource path="res://asserts/img/stand.png" type="Texture" id=1]
 [ext_resource path="res://dev/scenes/comp/msg_lbl.tscn" type="PackedScene" id=2]
-[ext_resource path="res://dev/scripts/lamb.gd" type="Script" id=3]
+[ext_resource path="res://dev/scripts/house.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 78, 66 )
+extents = Vector2( 19.5, 71.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 98.5, 83.5 )
+extents = Vector2( 24, 76 )
 
 [node name="house" type="RigidBody2D" groups=["house"]]
 position = Vector2( 422, 244 )
@@ -17,16 +17,17 @@ contact_monitor = true
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 86, 74 )
+position = Vector2( 24.5, 69.5 )
 shape = SubResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_right = 176.0
-margin_bottom = 149.0
+margin_right = 59.0
+margin_bottom = 141.0
 texture = ExtResource( 1 )
 expand = true
+stretch_mode = 5
 
 [node name="description" parent="." instance=ExtResource( 2 )]
 visible = false
@@ -34,7 +35,7 @@ visible = false
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 88.5, 73.5 )
+position = Vector2( 25, 71 )
 shape = SubResource( 2 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

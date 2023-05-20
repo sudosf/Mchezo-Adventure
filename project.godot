@@ -14,6 +14,19 @@ config/name="Mchezo-Adventure"
 run/main_scene="res://dev/scenes/main_room.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://dev/scripts/Global.gd"
+
+[display]
+
+window/size/width=1200
+window/size/height=700
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/AsepriteWizard/plugin.cfg" )
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
