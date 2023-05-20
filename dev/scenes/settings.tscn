@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/img/1600w-iC5A8PGB4t0.webp" type="Texture" id=1]
+[ext_resource path="res://dev/scripts/settings.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/upheavtt.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 28
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.768627, 0.768627, 0.768627, 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 2.0
+margin_top = 1.0
+margin_right = 1373.0
+margin_bottom = 742.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 525.0
+margin_top = 428.0
+margin_right = 846.0
+margin_bottom = 515.0
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+margin_right = 321.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
