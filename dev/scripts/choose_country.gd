@@ -12,8 +12,12 @@ func _ready():
 
 
 func _on_BackButton_pressed():
+	$AudioStreamPlayer.play()
+	yield($AudioStreamPlayer, "finished")
 	get_tree().change_scene("res://dev/scenes/menu.tscn")
 
 
 func _on_Johannesburg_pressed():
+	$AudioStreamPlayer.play()
+	yield($AudioStreamPlayer, "finished")
 	get_tree().change_scene("res://dev/scenes/main_room.tscn")
