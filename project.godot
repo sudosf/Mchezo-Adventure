@@ -25,7 +25,7 @@ window/size/height=700
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/AsepriteWizard/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [gui]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://asserts/img/floor-texture-d-texture.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/img/floor-texture-d-texture.jpg" type="Texture" id=2]
 [ext_resource path="res://dev/scenes/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://dev/scripts/test_room.gd" type="Script" id=4]
 
