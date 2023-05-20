@@ -12,7 +12,7 @@ func _ready():
 
 func _process(delta):
 	var screen_size = get_viewport().get_visible_rect().size
-	print(screen_size - Vector2(180, 120))
+	# print(screen_size - Vector2(180, 120))
 	map_instance.rect_position = screen_size / 6
 	
 func set_minimap():

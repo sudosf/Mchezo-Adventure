@@ -16,4 +16,4 @@ func _on_BackButton_pressed():
 
 
 func _on_Johannesburg_pressed():
-	get_tree().change_scene("res://dev/scenes/test_room.tscn")
+	get_tree().change_scene("res://dev/scenes/main_room.tscn")

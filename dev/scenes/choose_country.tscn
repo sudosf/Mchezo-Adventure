@@ -79,6 +79,7 @@ focus_neighbour_left = NodePath("../BackButton")
 focus_neighbour_bottom = NodePath("../Johannesburg")
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = SubResource( 5 )
+disabled = true
 text = "Lagos"
 
 [node name="Accra" type="Button" parent="VBoxContainer"]
@@ -88,6 +89,7 @@ margin_bottom = 192.0
 focus_neighbour_left = NodePath("../BackButton")
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = SubResource( 6 )
+disabled = true
 text = "Accra"
 
 [node name="BackButton" type="Button" parent="VBoxContainer"]
