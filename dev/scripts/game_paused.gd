@@ -7,7 +7,7 @@ func _ready():
 
 
 func _on_Settings_pressed():
-	pass
+	get_tree().change_scene("res://dev/scenes/option.tscn")
 
 func _on_ResumeGame_pressed():
 	self.visible = false
