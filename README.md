@@ -10,7 +10,6 @@ Gameplay and Narrative:
 
 ## TODO
 
-<<<<<<< HEAD
 ### (Lagos, Jozi and Accra) Map
 - [ ] Map Design and Implementation(in Godot)
 - [ ] choose landmarks and areas of interest
@@ -32,8 +31,3 @@ Gameplay and Narrative:
 - [ ] add sound effects
 - [ ] create leaderboard and score reflecting
 - [ ] add animations to objects and player actions
-=======
-- [ ] map 
-- [ ] character
-- [X] storyline : [Notion Story Line Notes](https://refilwe-m.notion.site/Mchezo-Game-Story-Line-9e7662db8ac84bab98ff8d86abe5932e)
->>>>>>> a538a4bb936e16b62b0fad0bb0438cf7625d519a
