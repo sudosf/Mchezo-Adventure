@@ -26,3 +26,5 @@ func set_statsbar():
 	bar_instance.rect_position = Vector2(-510, -330)
 	$Room/Player/Camera2D.add_child(bar_instance)
 	bar_instance.raise()
+
+# func set_intro_qn()
