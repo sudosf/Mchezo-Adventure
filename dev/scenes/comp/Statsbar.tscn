@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://asserts/themes/main_theme.tres" type="Theme" id=1]
+
+[node name="Statsbar" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 1019.0
+margin_bottom = 57.0
+
+[node name="clues" type="Label" parent="Panel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -163.0
+margin_top = -15.5
+margin_right = -27.0
+margin_bottom = 16.5
+theme = ExtResource( 1 )
+text = "Clues 1/10"
+
+[node name="questions" type="Label" parent="Panel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -333.0
+margin_top = -13.5
+margin_right = -197.0
+margin_bottom = 18.5
+theme = ExtResource( 1 )
+text = "Questions 0/4"
+
+[node name="Timer" type="Label" parent="Panel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -526.0
+margin_top = -16.5
+margin_right = -390.0
+margin_bottom = 15.5
+theme = ExtResource( 1 )
+text = "Timer"
+
+[node name="Lives" type="Label" parent="Panel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -1009.0
+margin_top = -16.5
+margin_right = -873.0
+margin_bottom = 15.5
+theme = ExtResource( 1 )
+text = "Lives 1/3"
