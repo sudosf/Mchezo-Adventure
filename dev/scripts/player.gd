@@ -6,6 +6,9 @@ var velocity = Vector2()
 func _process(delta):
 	velocity = Vector2()
 	
+	if Global.is_paused:
+		return # disable player movement on pause screen
+	
 	if Input.is_action_pressed("down"):
 		velocity.y += speed
 	if Input.is_action_pressed("up"):
