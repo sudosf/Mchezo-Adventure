@@ -13,9 +13,13 @@ func toggle_pause():
 	if Global.is_paused:
 		$Panel/Control.visible = false
 		Global.is_paused = false
+		$"/root/BackgroundMusic".stop()
+		
 	else: 
+		$"/root/BackgroundMusic".play()
 		$Panel/Control.visible = true
 		Global.is_paused = true
+		
 
 
 func _on_pauseBtn_pressed():
