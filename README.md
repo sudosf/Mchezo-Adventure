@@ -17,9 +17,7 @@ Gameplay and Narrative:
 
 ## Map TODO
 ### (Lagos, Jozi and Accra) Map
-- [ ] Map Design and Implementation(in Godot)
-- [ ] choose landmarks and areas of interest
-- [ ] which areas can be explored?
+- [ ]
 
 ## UI/UX TODO (Gugu)
 - [ ] font data and typography
@@ -31,19 +29,7 @@ Gameplay and Narrative:
 - [ ] leaderboards
 
 ## DEV TODO
-- [x] simple character design and implementation
-- [x] expanding map as character moves
-- [x] create minimap to guide player
-- [ ] create player stats bar (Health, questions solved/left, time-remaining)
-- [ ] create player inventory system (artifacts, clues, tressures, puzzles solved)
-- [ ] creating different types of interactive objects (NPC, tressure chest, puzzle etc)
-- [ ] create user menu, pause menu, settings menu
-- [ ] add sound effects (Refilwe)
-- [ ] create leaderboard and score reflecting
 - [ ] add animations to objects and player actions
-- [ ] Storyline and narrarive implementation (Flow of the game!)
-
-
 
 # City Outline, Landmarks and points of interest
 II. Jozi (Johannesburg, South Africa)
