@@ -17,7 +17,7 @@ extents = Vector2( 550.75, 271.5 )
 script = ExtResource( 2 )
 
 [node name="Ground" type="TextureRect" parent="."]
-margin_left = -898.0
+margin_left = -916.0
 margin_top = -432.0
 margin_right = 2012.0
 margin_bottom = 1386.0
@@ -56,14 +56,14 @@ flip_v = true
 [node name="lamp" parent="." instance=ExtResource( 4 )]
 position = Vector2( 996, 388 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="q1_landmark" type="Area2D" parent="."]
 position = Vector2( 119, 1097 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="q1_landmark"]
 position = Vector2( -18, 289.5 )
 shape = SubResource( 1 )
 
-[node name="Label" type="Label" parent="Area2D"]
+[node name="Label" type="Label" parent="q1_landmark"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -77,8 +77,13 @@ text = "Nelson Mandela Square"
 align = 1
 valign = 1
 
-[node name="house" parent="Area2D" instance=ExtResource( 7 )]
+[node name="house" parent="q1_landmark" instance=ExtResource( 7 )]
 position = Vector2( 226, 169 )
+script = null
+
+[node name="house2" parent="q1_landmark" instance=ExtResource( 7 )]
+position = Vector2( -446, 77 )
+script = null
 
 [node name="kota" parent="." instance=ExtResource( 9 )]
 position = Vector2( 4550, 1297 )
@@ -97,6 +102,9 @@ position = Vector2( 3576, -315 )
 
 [node name="TextureRect" parent="gold2" index="1"]
 texture = ExtResource( 8 )
+
+[connection signal="body_entered" from="q1_landmark" to="." method="_on_q1_landmark_body_entered"]
+[connection signal="body_exited" from="q1_landmark" to="." method="_on_q1_landmark_body_exited"]
 
 [editable path="gold"]
 [editable path="gold2"]

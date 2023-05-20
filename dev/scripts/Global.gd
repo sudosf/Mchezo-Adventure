@@ -25,6 +25,7 @@ var questions = [
 
 var hide_qnLbl: bool = false
 
+var curr_question_set: bool = false
 var total_questions = 3
 var qn_type = "Mission"
 var intial_question = "go to the station post to get your first assignment"

@@ -11,11 +11,13 @@ func _ready():
 func _process(delta):
 	toggle_lamp()
 	
+	# activate next queation
 	if Input.is_action_pressed("action") and player_entered:
 		set_next_qn()
 		Global.lamp_active = false
 		Global.arrow_active = false
 		$description.visible = false
+		Global.curr_question_set = true
 		
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":

@@ -2,31 +2,34 @@ extends Node2D
 
 # onready var house = preload("res://dev/scenes/comp/house.tscn")
 
+var player_entered
+
 var house_positions = [
 	Vector2(1000, 244),
 	Vector2(422, 1000),
 	Vector2(1000, 1000),
 ]
 
-var house_pos = Vector2(422, 244)
-
 func _ready():
-	# set_house()
-	# set_lamp()
 	Global.arrow_follow = $lamp.position
-	# print(Global.arrow_follow)
 
-"""
-func set_q1_landmark():
-	for pos in house_positions:
-		var house_int = house.instance()
-		house_int.get_node("description").text = "We just made house"
-		house_int.position = pos
-		add_child(house_int) 
+func _process(delta):
+	# collect power-ups
+	if Input.is_action_pressed("ui_accept") and player_entered:
+		Global.updateLbl = "Status: landmark found!"
+		Global.score += 5
+		player_entered = false
+		$q1_landmark.disconnect("body_entered", self, "_on_q1_landmark_body_entered")
 
-func set_lamp():
-	var lamp_int = lamp.instance()
-	lamp_int.get_node("description").text = "get your question here"
-	lamp_int.position = house_pos
-	add_child(lamp_int)
-"""
+func _on_q1_landmark_body_entered(body):
+	if Global.curr_question_set:
+		print(body.get_name())
+		if body.get_name() == "Player":
+			print("buddy found us")
+			player_entered = true
+
+
+func _on_q1_landmark_body_exited(body):
+	if body.get_name() == "Player":
+		print("buddy left")
+		player_entered = false
