@@ -11,7 +11,7 @@ Gameplay and Narrative:
 ## TODO (General)
 - [ ] storyline and narrative per city
 - [ ] set of quiz questions and answers per city
-- [ ] types of power-ups, treasures, artifacts and special items per city
+- [ ] types of power-ups, treasures, artifacts and special items per city (Todo)
 - [ ] design and create mini-games and puzzles inside each city
 - [ ] leaderboards and criteria for earning points 
 
@@ -21,13 +21,14 @@ Gameplay and Narrative:
 - [ ] choose landmarks and areas of interest
 - [ ] which areas can be explored?
 
-## UI/UX TODO
+## UI/UX TODO (Gugu)
 - [ ] font data and typography
 - [ ] game and menu theme (colours etc.)
 - [ ] button types 
 - [ ] main menu UI design
 - [ ] settings menu UI design
 - [ ] pause menu UI design
+- [ ] leaderboards
 
 ## DEV TODO
 - [x] simple character design and implementation
@@ -37,7 +38,7 @@ Gameplay and Narrative:
 - [ ] create player inventory system (artifacts, clues, tressures, puzzles solved)
 - [ ] creating different types of interactive objects (NPC, tressure chest, puzzle etc)
 - [ ] create user menu, pause menu, settings menu
-- [ ] add sound effects
+- [ ] add sound effects (Refilwe)
 - [ ] create leaderboard and score reflecting
 - [ ] add animations to objects and player actions
 - [ ] Storyline and narrarive implementation (Flow of the game!)
