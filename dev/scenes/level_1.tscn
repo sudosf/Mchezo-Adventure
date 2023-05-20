@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/MandelaSquareMap.png" type="Texture" id=1]
 [ext_resource path="res://dev/scripts/level_1.gd" type="Script" id=2]
@@ -12,6 +12,18 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 550.75, 271.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2949, 155.75 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1505.5, 1850 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 239.5, 1762 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 2882, 198 )
 
 [node name="Room" type="Node2D"]
 script = ExtResource( 2 )
@@ -34,9 +46,9 @@ texture = ExtResource( 6 )
 expand = true
 
 [node name="Ground3" type="TextureRect" parent="."]
-margin_left = -918.0
+margin_left = -898.0
 margin_top = 1381.0
-margin_right = 1992.0
+margin_right = 2002.0
 margin_bottom = 3199.0
 texture = ExtResource( 1 )
 expand = true
@@ -86,25 +98,66 @@ position = Vector2( -446, 77 )
 script = null
 
 [node name="kota" parent="." instance=ExtResource( 9 )]
-position = Vector2( 4550, 1297 )
+position = Vector2( 3554, 1342 )
 
 [node name="gold" parent="." instance=ExtResource( 9 )]
 position = Vector2( -841, 2129 )
 
+[node name="CollisionShape2D" parent="gold" index="0"]
+position = Vector2( 562, 59 )
+
 [node name="TextureRect" parent="gold" index="1"]
+margin_left = 476.0
+margin_top = -8.0
+margin_right = 652.0
+margin_bottom = 141.0
 texture = ExtResource( 8 )
 
+[node name="Area2D" parent="gold" index="3"]
+position = Vector2( 23, 8 )
+
+[node name="CollisionShape2D" parent="gold/Area2D" index="0"]
+position = Vector2( 549, 68 )
+
 [node name="kota2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 4312, 2960 )
+position = Vector2( 3082, 2678 )
 
 [node name="gold2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 3576, -315 )
 
 [node name="TextureRect" parent="gold2" index="1"]
+margin_left = -1030.0
+margin_top = 871.0
+margin_right = -854.0
+margin_bottom = 1020.0
 texture = ExtResource( 8 )
 
+<<<<<<< Updated upstream
 [connection signal="body_entered" from="q1_landmark" to="." method="_on_q1_landmark_body_entered"]
 [connection signal="body_exited" from="q1_landmark" to="." method="_on_q1_landmark_body_exited"]
+=======
+[node name="CollisionShape2D" parent="gold2/Area2D" index="0"]
+position = Vector2( -941, 945 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 0, 7 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1915, -311.75 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 5122, 1351 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -608, 1473 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2041, 3070 )
+shape = SubResource( 5 )
+>>>>>>> Stashed changes
 
 [editable path="gold"]
 [editable path="gold2"]
