@@ -14,5 +14,32 @@ margin_right = 2012.0
 margin_bottom = 1386.0
 texture = ExtResource( 1 )
 expand = true
+stretch_mode = 1
+
+[node name="Ground2" type="TextureRect" parent="."]
+margin_left = 2013.0
+margin_top = -427.0
+margin_right = 4923.0
+margin_bottom = 1391.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Ground3" type="TextureRect" parent="."]
+margin_left = -918.0
+margin_top = 1381.0
+margin_right = 1992.0
+margin_bottom = 3199.0
+texture = ExtResource( 1 )
+expand = true
+flip_v = true
+
+[node name="Ground4" type="TextureRect" parent="."]
+margin_left = 1983.0
+margin_top = 1381.0
+margin_right = 4893.0
+margin_bottom = 3199.0
+texture = ExtResource( 1 )
+expand = true
+flip_v = true
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
