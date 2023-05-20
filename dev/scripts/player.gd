@@ -16,4 +16,4 @@ func _process(delta):
 		velocity.x += speed
 	
 	move_and_slide(velocity)
-	look_at(get_global_mouse_position())
+	# look_at(get_global_mouse_position())
