@@ -11,13 +11,6 @@ Gameplay and Narrative:
 ## TODO (General)
 - [ ] storyline and narrative per city
 - [ ] set of quiz questions and answers per city
-- [ ] types of power-ups, treasures, artifacts and special items per city (Todo)
-- [ ] design and create mini-games and puzzles inside each city
-- [ ] leaderboards and criteria for earning points 
-
-## Map TODO
-### (Lagos, Jozi and Accra) Map
-- [ ]
 
 ## UI/UX TODO (Gugu)
 - [ ] font data and typography
