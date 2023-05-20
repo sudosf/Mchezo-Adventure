@@ -1,5 +1,12 @@
 extends Node
 
+# player stats
+var score = 0
+var timer_mins = 1
+var questions_left
+var power_ups = 0 
+
+
 var arrow_follow = Vector2(0, 0) # default
 
 var is_paused: bool = false

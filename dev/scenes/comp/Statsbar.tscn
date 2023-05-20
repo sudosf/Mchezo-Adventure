@@ -32,7 +32,7 @@ margin_top = -19.5
 margin_right = -114.0
 margin_bottom = 12.5
 theme = ExtResource( 1 )
-text = "Clues 1/10"
+text = "power-ups 0/3"
 align = 1
 valign = 1
 
@@ -57,8 +57,8 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -699.0
 margin_top = -19.5
-margin_right = -563.0
-margin_bottom = 12.5
+margin_right = -514.0
+margin_bottom = 22.5
 theme = ExtResource( 1 )
 text = "Timer"
 align = 1
@@ -74,7 +74,7 @@ margin_top = -16.5
 margin_right = -870.0
 margin_bottom = 16.5
 theme = ExtResource( 1 )
-text = "Lives 1/3"
+text = "Score: 0"
 align = 1
 valign = 1
 
@@ -143,10 +143,15 @@ icon_align = 2
 expand_icon = true
 
 [node name="qnLblTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 7.0
 one_shot = true
+autostart = true
+
+[node name="playerTimer" type="Timer" parent="."]
+wait_time = 0.1
 autostart = true
 
 [connection signal="pressed" from="Panel/pauseBtn" to="." method="_on_pauseBtn_pressed"]
 [connection signal="pressed" from="Panel/question/togBtn" to="." method="_on_togBtn_pressed"]
 [connection signal="timeout" from="qnLblTimer" to="." method="_on_qnLblTimer_timeout"]
+[connection signal="timeout" from="playerTimer" to="." method="_on_playerTimer_timeout"]
