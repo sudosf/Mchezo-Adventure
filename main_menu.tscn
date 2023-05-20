@@ -1,5 +1,62 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://asserts/themes/title_label.tres" type="Theme" id=1]
+[ext_resource path="res://asserts/themes/curves.tres" type="Theme" id=2]
+[ext_resource path="res://dev/scripts/main_menu.gd" type="Script" id=3]
 
 [node name="menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="playBtn" type="Button" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -167.0
+margin_top = -42.0
+margin_right = 137.0
+margin_bottom = 46.0
+theme = ExtResource( 2 )
+text = "Play"
+
+[node name="settingsBtn" type="Button" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -142.0
+margin_top = 66.0
+margin_right = 121.0
+margin_bottom = 123.0
+theme = ExtResource( 2 )
+text = "Settings"
+
+[node name="exitBtn" type="Button" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -140.0
+margin_top = 133.0
+margin_right = 123.0
+margin_bottom = 190.0
+theme = ExtResource( 2 )
+text = "Exit"
+
+[node name="titleLbl" type="Label" parent="Panel"]
+margin_left = 258.0
+margin_top = 131.0
+margin_right = 798.0
+margin_bottom = 237.0
+theme = ExtResource( 1 )
+text = "Mchezo Adventure Game"
+
+[connection signal="pressed" from="Panel/playBtn" to="." method="_on_playBtn_pressed"]
+[connection signal="pressed" from="Panel/settingsBtn" to="." method="_on_settingsBtn_pressed"]
+[connection signal="pressed" from="Panel/exitBtn" to="." method="_on_exitBtn_pressed"]

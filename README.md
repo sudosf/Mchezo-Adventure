@@ -20,6 +20,13 @@ Gameplay and Narrative:
 - [ ] design and create mini-games and puzzles inside each city
 - [ ] leaderboards and criteria for earning points 
 
+## UI/UX TODO
+- [ ] font data and typography
+- [ ] game and menu theme (colours etc.)
+- [ ] button types 
+- [ ] main menu UI design
+- [ ] settings menu UI design
+- [ ] pause menu UI design
 
 ## DEV TODO
 - [x] simple character design and implementation
