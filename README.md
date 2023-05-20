@@ -24,8 +24,8 @@ Gameplay and Narrative:
 ## DEV TODO
 - [x] simple character design and implementation
 - [x] expanding map as character moves
+- [x] create minimap to guide player
 - [ ] create player stats bar (Health, inventory, etc)
-- [ ] create minimap to guide player
 - [ ] creating different types of interactive objects (NPC, tressure chest, puzzle etc)
 - [ ] create user menu, pause menu, settings menu
 - [ ] add sound effects
