@@ -39,6 +39,7 @@ Gameplay and Narrative:
 - [ ] add sound effects
 - [ ] create leaderboard and score reflecting
 - [ ] add animations to objects and player actions
+- [ ] Storyline and narrarive implementation (Flow of the game!)
 
 
 
