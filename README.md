@@ -32,7 +32,8 @@ Gameplay and Narrative:
 - [x] simple character design and implementation
 - [x] expanding map as character moves
 - [x] create minimap to guide player
-- [ ] create player stats bar (Health, inventory, etc)
+- [ ] create player stats bar (Health, questions solved/left, time-remaining)
+- [ ] create player inventory system (artifacts, clues, tressures, puzzles solved)
 - [ ] creating different types of interactive objects (NPC, tressure chest, puzzle etc)
 - [ ] create user menu, pause menu, settings menu
 - [ ] add sound effects
