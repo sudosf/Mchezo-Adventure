@@ -31,3 +31,54 @@ Gameplay and Narrative:
 - [ ] add sound effects
 - [ ] create leaderboard and score reflecting
 - [ ] add animations to objects and player actions
+
+
+
+# City Outline, Landmarks and points of interest
+II. Jozi (Johannesburg, South Africa)
+A. Landmarks
+1. The Apartheid Museum
+2. Nelson Mandela Square
+3. Constitution Hill
+4. Gold Reef City
+5. Soweto and Vilakazi Street
+B. Treasures
+1. Wildlife reserves nearby, such as Kruger National Park
+2. Traditional African art and craft markets
+3. Culinary delights, including traditional South African cuisine
+C. Important Information
+1. Historical significance of the area during the apartheid era
+2. Cultural diversity and vibrant arts scene
+3. Safety precautions and tips for tourists
+
+III. Accra (Ghana)
+A. Landmarks
+1. Kwame Nkrumah Memorial Park
+2. Labadi Beach
+3. Jamestown and Ussher Fort
+4. Makola Market
+5. National Museum of Ghana
+B. Treasures
+1. Rich cultural heritage and traditional festivals
+2. Delicious Ghanaian cuisine, including jollof rice and banku
+3. Beautiful beaches and coastal scenery
+C. Important Information
+1. Connection to the transatlantic slave trade and historical significance
+2. Friendly and hospitable locals
+3. Health and safety considerations for travelers
+
+IV. Lagos (Nigeria)
+A. Landmarks
+1. Lekki Conservation Centre
+2. Nike Art Gallery
+3. National Museum Lagos
+4. Tarkwa Bay
+5. Eko Atlantic City
+B. Treasures
+1. Bustling markets and vibrant street life
+2. Afrobeat music and nightlife scene
+3. Nigerian delicacies, including suya and jollof rice
+C. Important Information
+1. Economic hub and cultural capital of Nigeria
+2. Traffic and transportation challenges in the city
+3. Safety precautions and travel tips for visitors
