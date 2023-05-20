@@ -8,17 +8,18 @@ Gameplay and Narrative:
 - finding all correct answers to the quiz questions provided is the basic requirement to complete the level
 - the player can complete the puzzles and collect various power-ups to boost their score and climb to the top
 
-## TODO
-
-### (Lagos, Jozi and Accra) Map
-- [ ] Map Design and Implementation(in Godot)
-- [ ] choose landmarks and areas of interest
-- [ ] which areas can be explored?
+## TODO (General)
 - [ ] storyline and narrative per city
 - [ ] set of quiz questions and answers per city
 - [ ] types of power-ups, treasures, artifacts and special items per city
 - [ ] design and create mini-games and puzzles inside each city
 - [ ] leaderboards and criteria for earning points 
+
+## Map TODO
+### (Lagos, Jozi and Accra) Map
+- [ ] Map Design and Implementation(in Godot)
+- [ ] choose landmarks and areas of interest
+- [ ] which areas can be explored?
 
 ## UI/UX TODO
 - [ ] font data and typography
