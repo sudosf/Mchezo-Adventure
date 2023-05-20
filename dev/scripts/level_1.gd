@@ -17,7 +17,7 @@ func _ready():
 	# print(Global.arrow_follow)
 
 """
-func set_house():
+func set_q1_landmark():
 	for pos in house_positions:
 		var house_int = house.instance()
 		house_int.get_node("description").text = "We just made house"
