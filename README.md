@@ -1,7 +1,9 @@
-# Ayoba Gaming Hackathon adventure game
+# Play Game Here : [Play](url.loading.com)
 
+## Ayoba Gaming Hackathon adventure game
 
 Gameplay and Narrative:
+
 - player explores the map to find interactive objects that contain quiz questions
 - the player is then required to explore the city further to find clues (as tressure chests, artifacts, special items) while collecting power-ups and solving mini-puzzles
 - for each quiz question found, 4 answers are available which are scattered on the map and the certain "clues" are required to unlock the answer "box"
@@ -9,24 +11,29 @@ Gameplay and Narrative:
 - the player can complete the puzzles and collect various power-ups to boost their score and climb to the top
 
 ## TODO (General)
+
 - [ ] storyline and narrative per city
 - [ ] set of quiz questions and answers per city
 
 ## UI/UX TODO (Gugu)
+
 - [ ] font data and typography
 - [ ] game and menu theme (colours etc.)
-- [ ] button types 
+- [ ] button types
 - [ ] main menu UI design
 - [ ] settings menu UI design
 - [ ] pause menu UI design
 - [ ] leaderboards
 
 ## DEV TODO
+
 - [ ] add animations to objects and player actions
 
 # City Outline, Landmarks and points of interest
+
 II. Jozi (Johannesburg, South Africa)
 A. Landmarks
+
 1. The Apartheid Museum
 2. Nelson Mandela Square
 3. Constitution Hill
@@ -43,6 +50,7 @@ C. Important Information
 
 III. Accra (Ghana)
 A. Landmarks
+
 1. Kwame Nkrumah Memorial Park
 2. Labadi Beach
 3. Jamestown and Ussher Fort
@@ -59,6 +67,7 @@ C. Important Information
 
 IV. Lagos (Nigeria)
 A. Landmarks
+
 1. Lekki Conservation Centre
 2. Nike Art Gallery
 3. National Museum Lagos
