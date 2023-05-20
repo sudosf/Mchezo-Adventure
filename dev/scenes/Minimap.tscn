@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://dev/scripts/Minimap.gd" type="Script" id=1]
-[ext_resource path="res://dev/scenes/test_room.tscn" type="PackedScene" id=2]
+[ext_resource path="res://dev/scenes/level_1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/img/border.png" type="Texture" id=3]
 
 [node name="Minimap" type="Control"]

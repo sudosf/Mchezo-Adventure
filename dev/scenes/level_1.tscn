@@ -1,27 +1,28 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/MandelaSquareMap.png" type="Texture" id=1]
+[ext_resource path="res://dev/scripts/test_room.gd" type="Script" id=2]
 [ext_resource path="res://dev/scenes/player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://dev/scripts/test_room.gd" type="Script" id=4]
+[ext_resource path="res://assets/MandelaSquareMap2.png" type="Texture" id=4]
 
 [node name="Room" type="Node2D"]
-script = ExtResource( 4 )
+script = ExtResource( 2 )
 
 [node name="Ground" type="TextureRect" parent="."]
 margin_left = -898.0
 margin_top = -432.0
 margin_right = 2012.0
 margin_bottom = 1386.0
-texture = ExtResource( 1 )
+texture = ExtResource( 4 )
 expand = true
 stretch_mode = 1
 
 [node name="Ground2" type="TextureRect" parent="."]
-margin_left = 2013.0
+margin_left = 2004.0
 margin_top = -427.0
-margin_right = 4923.0
-margin_bottom = 1391.0
-texture = ExtResource( 1 )
+margin_right = 4889.0
+margin_bottom = 1385.0
+texture = ExtResource( 4 )
 expand = true
 
 [node name="Ground3" type="TextureRect" parent="."]
