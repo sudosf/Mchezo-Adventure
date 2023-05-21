@@ -2,14 +2,17 @@ extends RigidBody2D
 
 var player_entered
 
+var actionBtn_pressed: bool = false
+
 func _ready():
+	$description.visible = false
 	pass
 
 func _process(delta):
 	
 	# collect power-ups
-	if Input.is_action_just_pressed("action") and player_entered:
-		$description.visible = false
+	if (Input.is_action_just_pressed("action") or actionBtn_pressed)and player_entered:
+		actionBtn_pressed = false
 		$collectSound.play()
 		self.visible = false
 		self.position = Vector2(5000, 5000) # remove from scene
@@ -30,6 +33,8 @@ func _on_Area2D_body_exited(body):
 		$description.visible = false
 		player_entered = false
 
+func _on_actionBtn_pressed():
+	actionBtn_pressed = true
 
 
 

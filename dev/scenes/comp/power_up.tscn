@@ -30,7 +30,7 @@ texture = ExtResource( 1 )
 expand = true
 
 [node name="description" parent="." instance=ExtResource( 2 )]
-visible = false
+text = "Touch / Press \"E\" to interact"
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -41,5 +41,13 @@ shape = SubResource( 2 )
 [node name="collectSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
 
+[node name="actionBtn" type="Button" parent="."]
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 184.0
+margin_bottom = 158.0
+flat = true
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="pressed" from="actionBtn" to="." method="_on_actionBtn_pressed"]

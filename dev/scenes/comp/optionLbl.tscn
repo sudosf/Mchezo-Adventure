@@ -30,7 +30,15 @@ align = 1
 valign = 1
 
 [node name="description" parent="." instance=ExtResource( 3 )]
-text = "Press \"E\" to select answer"
+text = "Touch / Press \"E\" to select answer"
+
+[node name="actionBtn" type="Button" parent="."]
+margin_left = -11.0
+margin_top = -2.0
+margin_right = 172.0
+margin_bottom = 55.0
+flat = true
 
 [connection signal="body_entered" from="." to="." method="_on_optionLbl_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_optionLbl_body_exited"]
+[connection signal="pressed" from="actionBtn" to="." method="_on_actionBtn_pressed"]

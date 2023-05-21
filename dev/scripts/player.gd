@@ -20,3 +20,29 @@ func _process(delta):
 	
 	move_and_slide(velocity)
 	# look_at(get_global_mouse_position())
+
+
+func _on_up_pressed():
+	Input.action_press("up")
+
+func _on_right_pressed():
+	Input.action_press("right")
+
+func _on_down_pressed():
+	Input.action_press("down")
+
+func _on_left_pressed():
+	Input.action_press("left")
+
+
+func _on_up_released():
+	Input.action_release("up")
+
+func _on_down_released():
+	Input.action_release("down")
+
+func _on_left_released():
+	Input.action_release("left")
+
+func _on_right_released():
+	Input.action_release("right")

@@ -29,7 +29,7 @@ texture = ExtResource( 1 )
 expand = true
 
 [node name="description" parent="." instance=ExtResource( 2 )]
-text = "Press \"E\" to select"
+text = "Touch / Press \"E\" to select"
 
 [node name="Area2D" type="Area2D" parent="." groups=["house"]]
 
@@ -42,5 +42,13 @@ visible = false
 margin_right = 40.0
 margin_bottom = 14.0
 
+[node name="actionBtn" type="Button" parent="."]
+margin_left = -9.0
+margin_top = -9.0
+margin_right = 188.0
+margin_bottom = 157.0
+flat = true
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="pressed" from="actionBtn" to="." method="_on_actionBtn_pressed"]

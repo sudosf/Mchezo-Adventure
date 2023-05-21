@@ -5,6 +5,8 @@ var player_entered
 var option_selected
 var answer
 
+var actionBtn_pressed: bool = false
+
 func _ready():
 	$description.visible = false
 	print($answer.text)
@@ -12,7 +14,8 @@ func _ready():
 func _process(delta):
 	
 	# collect power-ups
-	if Input.is_action_just_pressed("action") and player_entered:
+	if (Input.is_action_just_pressed("action") or actionBtn_pressed)and player_entered:
+		actionBtn_pressed = false
 		$description.visible = false
 		self.visible = false
 		self.position = Vector2(5000, 5000) # remove from scene
@@ -48,3 +51,12 @@ func _on_optionLbl_body_exited(body):
 	if body.get_name() == "Player":
 		$description.visible = false
 		player_entered = false
+
+
+func _on_actionBtn_pressed():
+	actionBtn_pressed = true
+
+
+
+
+

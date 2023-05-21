@@ -1,6 +1,7 @@
 extends RigidBody2D
 
 func _ready():
+	$description.visible = false
 	pass
 
 func _on_Area2D_body_entered(body):
@@ -13,3 +14,5 @@ func _on_Area2D_body_exited(body):
 	if body.get_name() == "Player":
 		print("buddy left")
 		$description.visible = false
+
+

@@ -3,6 +3,8 @@ extends RigidBody2D
 var player_entered
 var original_pos
 
+var actionBtn_pressed: bool = false
+
 func _ready():
 	$description.visible = false
 	original_pos = self.position
@@ -12,7 +14,8 @@ func _process(delta):
 	toggle_lamp()
 	
 	# activate next queation
-	if Input.is_action_just_pressed("action") and player_entered:
+	if (Input.is_action_just_pressed("action") or actionBtn_pressed)and player_entered:
+		actionBtn_pressed = false
 		Global.lamp_active = false
 		Global.arrow_active = false
 		$description.visible = false
@@ -45,3 +48,7 @@ func toggle_lamp():
 		# offest lamp position
 		self.visible = false
 		self.position = original_pos + Vector2(1000, 1000)
+
+
+func _on_actionBtn_pressed():
+	actionBtn_pressed = true

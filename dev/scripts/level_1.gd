@@ -45,7 +45,7 @@ func _process(delta):
 			timer_started = true
 
 	# landmark question
-	if Input.is_action_pressed("ui_accept") and player_entered:
+	if (Input.is_action_pressed("ui_accept") or Input.is_action_pressed("action")) and player_entered:
 		if Global.curr_question_num == 1:
 			Global.updateLbl = "Status: landmark found!"
 			Global.score += 10
