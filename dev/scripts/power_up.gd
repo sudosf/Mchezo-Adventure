@@ -14,8 +14,12 @@ func _process(delta):
 	if (Input.is_action_just_pressed("action") or actionBtn_pressed or Global.action_pressed) and player_entered:
 		actionBtn_pressed = false
 		Global.action_pressed = false
-		$collectSound.play()
+		#yield timeout(0.5)
+		
+
 		self.visible = false
+		$collectSound.play()
+		yield($collectSound, "finished")
 		self.position = Vector2(5000, 5000) # remove from scene
 		Global.updateLbl = "Status: power up collected!"
 		Global.power_ups += 1
