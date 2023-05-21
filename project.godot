@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Mchezo-Adventure"
-run/main_scene="res://dev/scenes/main_room.tscn"
+run/main_scene="res://dev/scenes/menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]

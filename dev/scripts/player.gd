@@ -46,3 +46,7 @@ func _on_left_released():
 
 func _on_right_released():
 	Input.action_release("right")
+
+
+func _on_actionBtn_pressed():
+	Global.action_pressed = true

@@ -14,8 +14,9 @@ func _ready():
 func _process(delta):
 	
 	# collect power-ups
-	if (Input.is_action_just_pressed("action") or actionBtn_pressed)and player_entered:
+	if (Input.is_action_just_pressed("action") or actionBtn_pressed or Global.action_pressed) and player_entered:
 		actionBtn_pressed = false
+		Global.action_pressed = false
 		$description.visible = false
 		self.visible = false
 		self.position = Vector2(5000, 5000) # remove from scene

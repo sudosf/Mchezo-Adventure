@@ -20,7 +20,8 @@ func _process(delta):
 	if Input.is_action_just_pressed("pause"):
 		toggle_pause()
 		
-	if Input.is_action_pressed("action"):
+	if Input.is_action_pressed("action") or Global.action_pressed:
+		Global.action_pressed = false
 		qnLbl.visible = true
 	
 	if Global.is_paused:

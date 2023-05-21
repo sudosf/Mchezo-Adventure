@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://dev/scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -15,6 +15,9 @@ extents = Vector2( 29, 30 )
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.0392157, 0.0392157, 0.0392157, 0.52549 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.85098, 0.85098, 0.85098, 1 )
 
 [node name="Player" type="KinematicBody2D" groups=["player"]]
 script = ExtResource( 1 )
@@ -74,13 +77,12 @@ scale = Vector2( 0.145191, 0.127778 )
 normal = ExtResource( 5 )
 
 [node name="actionBtn" type="Button" parent="joystick"]
-visible = false
 margin_left = 260.0
-margin_top = 117.0
-margin_right = 337.0
-margin_bottom = 180.0
+margin_top = 85.0
+margin_right = 334.0
+margin_bottom = 158.0
+custom_styles/normal = SubResource( 3 )
 icon = ExtResource( 9 )
-flat = true
 expand_icon = true
 
 [connection signal="pressed" from="joystick/up" to="." method="_on_up_pressed"]
@@ -91,3 +93,4 @@ expand_icon = true
 [connection signal="released" from="joystick/left" to="." method="_on_left_released"]
 [connection signal="pressed" from="joystick/right" to="." method="_on_right_pressed"]
 [connection signal="released" from="joystick/right" to="." method="_on_right_released"]
+[connection signal="pressed" from="joystick/actionBtn" to="." method="_on_actionBtn_pressed"]

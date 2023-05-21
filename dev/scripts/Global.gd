@@ -2,9 +2,13 @@ extends Node
 
 # player stats
 var score = 0
-var timer_mins = 1
+var timer_mins = 5
 var questions_complete = 0
 var power_ups = 0 
+
+
+# action button
+var action_pressed = false
 
 # status lbl
 var updateLbl = "Status: Exploring"
@@ -20,7 +24,7 @@ var arrow_active = true
 # list on questions
 # order determines how they will be asked
 var questions = [
-	{"question": "find the prominent landmark by exploring the area, Press 'Enter' once you found it", "answer": "none"},
+	{"question": "find the prominent landmark by exploring the area, Press 'E' or 'Enter' once you found it", "answer": "none"},
 	{"question": "What is the nickname of Johannesburg? explore to find the answer", "answer": "Jozi"},
 	{"question": "Which is the most prominent mode of transportation? explore and find the correct vehicle", "answer": "mini-taxi"}
 ]

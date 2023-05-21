@@ -14,8 +14,9 @@ func _process(delta):
 	toggle_lamp()
 	
 	# activate next queation
-	if (Input.is_action_just_pressed("action") or actionBtn_pressed)and player_entered:
+	if (Input.is_action_just_pressed("action") or actionBtn_pressed or Global.action_pressed) and player_entered:
 		actionBtn_pressed = false
+		Global.action_pressed = false
 		Global.lamp_active = false
 		Global.arrow_active = false
 		$description.visible = false
