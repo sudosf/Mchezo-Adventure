@@ -171,7 +171,7 @@ texture = ExtResource( 8 )
 position = Vector2( -1341, 575 )
 
 [node name="TextureRect" type="TextureRect" parent="StaticBody2D"]
-margin_left = 864.0
+margin_left = 385.0
 margin_top = -684.0
 margin_right = 979.0
 margin_bottom = 2014.0
@@ -181,24 +181,24 @@ expand = true
 [node name="TextureRect2" type="TextureRect" parent="StaticBody2D"]
 margin_left = 5317.0
 margin_top = -698.0
-margin_right = 5505.0
+margin_right = 6224.0
 margin_bottom = 2035.0
 texture = ExtResource( 10 )
 expand = true
 
 [node name="TextureRect3" type="TextureRect" parent="StaticBody2D"]
-margin_left = 944.0
-margin_top = -681.0
-margin_right = 5442.0
+margin_left = 357.0
+margin_top = -1005.0
+margin_right = 6245.0
 margin_bottom = -603.0
 texture = ExtResource( 10 )
 expand = true
 
 [node name="TextureRect4" type="TextureRect" parent="StaticBody2D"]
-margin_left = 916.0
+margin_left = 389.0
 margin_top = 1908.0
-margin_right = 5435.0
-margin_bottom = 2018.0
+margin_right = 6226.0
+margin_bottom = 2617.0
 texture = ExtResource( 10 )
 expand = true
 

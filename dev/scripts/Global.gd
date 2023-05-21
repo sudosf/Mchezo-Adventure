@@ -49,8 +49,10 @@ func update_qnLbl():
 	if q3_complete:
 		updateLbl = "Status: demo complete"
 		Global.curr_question = "all questions answered"
+		get_tree().change_scene("res://dev/scenes/end_game.tscn")
 		Global.arrow_active = false
 		Global.lamp_active = false
+		
 		
 	if !curr_question_set:
 		for obj in questions:
