@@ -17,6 +17,8 @@ func _process(delta):
 	if (Input.is_action_just_pressed("action") or actionBtn_pressed or Global.action_pressed) and player_entered:
 		actionBtn_pressed = false
 		Global.action_pressed = false
+		$lampSound.play()
+		yield($lampSound, "finished")
 		Global.lamp_active = false
 		Global.arrow_active = false
 		$description.visible = false
