@@ -8,6 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Statsbar/Panel/toEndGameBtn.visible = false
 	pass 
 	
 func _on_Playagain_pressed():

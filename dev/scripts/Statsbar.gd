@@ -20,6 +20,7 @@ func _process(delta):
 	
 	if Global.q3_complete:
 		$Panel/toEndGameBtn.visible = true
+		Global.q3_complete = false
 	
 	if Input.is_action_just_pressed("pause"):
 		toggle_pause()
