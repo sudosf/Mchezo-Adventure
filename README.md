@@ -1,4 +1,4 @@
-# Play Game Here : [Play](url.loading.com)
+# Play Game Here : [Play Live!](https://mchezo-adventure-game.netlify.app/)
 
 ## Ayoba Gaming Hackathon adventure game
 
