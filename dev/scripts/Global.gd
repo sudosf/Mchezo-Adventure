@@ -6,7 +6,7 @@ var timer_mins = 5
 var questions_complete = 0
 var power_ups = 0 
 
-
+var pos_offset = Vector2(8000, 8000)
 # action button
 var action_pressed = false
 
@@ -46,6 +46,8 @@ var q2_attempts = 0
 
 var q3_complete: bool = false
 
+var q2_instance : Array
+
 func _ready():
 	curr_question = initial_question
 
@@ -53,10 +55,8 @@ func update_qnLbl():
 	if q3_complete:
 		updateLbl = "Status: demo complete"
 		Global.curr_question = "all questions answered"
-		get_tree().change_scene("res://dev/scenes/end_game.tscn")
 		Global.arrow_active = false
 		Global.lamp_active = false
-		
 		
 	if !curr_question_set:
 		for obj in questions:
@@ -72,3 +72,12 @@ func reset_station():
 		Global.curr_question = Global.initial_question
 		Global.curr_question_set = false
 		Global.arrow_active = true
+
+func reset_progress():
+	score = 0
+	timer_mins = 5
+	questions_complete = 0
+	power_ups = 0 
+
+func set_gameover():
+	get_tree().change_scene("res://dev/scenes/end_game.tscn")

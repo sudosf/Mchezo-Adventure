@@ -14,12 +14,10 @@ func _ready():
 func _process(delta):
 	
 	# collect power-ups
-	if (Input.is_action_just_pressed("action") or actionBtn_pressed or Global.action_pressed) and player_entered:
-		actionBtn_pressed = false
-		Global.action_pressed = false
+	if (Input.is_action_just_pressed("action") or Global.action_pressed or actionBtn_pressed) and player_entered:
 		$description.visible = false
 		self.visible = false
-		self.position = Vector2(5000, 5000) # remove from scene
+		self.position = Global.pos_offset # remove from scene
 		
 		if option_selected == answer:
 			Global.updateLbl = "Correct, well done!"
@@ -52,7 +50,6 @@ func _on_optionLbl_body_exited(body):
 	if body.get_name() == "Player":
 		$description.visible = false
 		player_entered = false
-
 
 func _on_actionBtn_pressed():
 	actionBtn_pressed = true

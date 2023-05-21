@@ -18,16 +18,22 @@ func _process(delta):
 		
 
 		self.visible = false
+<<<<<<< HEAD
 		$collectSound.play()
 		yield($collectSound, "finished")
 		self.position = Vector2(5000, 5000) # remove from scene
+=======
+		self.position = Global.pos_offset # remove from scene
+>>>>>>> 2a57979 (bug fixes and finishing touches)
 		Global.updateLbl = "Status: power up collected!"
 		Global.power_ups += 1
 		Global.score += 5
+		print("action pressed end")
+		self.queue_free()
 
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":
-		#print("buddy found us")
+		print(self.get_global_position())
 		$description.visible = true
 		player_entered = true
 
@@ -39,6 +45,7 @@ func _on_Area2D_body_exited(body):
 		player_entered = false
 
 func _on_actionBtn_pressed():
+	print("action pressed")
 	actionBtn_pressed = true
 
 

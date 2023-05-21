@@ -17,7 +17,7 @@ func _ready():
 
 func _process(delta):
 	if !can_interact:
-		$description.rect_position = Vector2(8000, 8000)
+		$description.rect_position = Global.pos_offset
 		return
 		
 	# activate next question
@@ -30,8 +30,9 @@ func _process(delta):
 		
 		if option_selected == answer:
 			Global.updateLbl = "Correct, well done!"
-			Global.questions_complete += 1
+			Global.questions_complete += 0.5
 			Global.score += 10
+			Global.q3_complete = true
 			
 			Global.reset_station()
 		else:
@@ -40,8 +41,6 @@ func _process(delta):
 		
 		can_interact = false
 		player_entered = false
-		Global.q3_complete = true
-		
 		
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":
