@@ -15,5 +15,6 @@ func _on_ResumeGame_pressed():
 	# get_tree().change_scene("res://dev/scenes/main_room.tscn")	
 
 func _on_Menu_pressed():
+	Global.reset_progress()
 	Global.is_paused = false
 	get_tree().change_scene("res://dev/scenes/menu.tscn")

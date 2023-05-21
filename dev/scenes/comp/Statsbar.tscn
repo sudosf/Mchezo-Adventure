@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/themes/main_theme.tres" type="Theme" id=1]
 [ext_resource path="res://dev/scenes/game_paused.tscn" type="PackedScene" id=2]
@@ -14,9 +14,33 @@ corner_radius_bottom_right = 30
 bg_color = Color( 0, 0, 0, 1 )
 corner_radius_top_right = 30
 
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.176471, 0.505882, 0.145098, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_bottom = 1
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.0822269, 0.29541, 0.0507736, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 0.678431, 0, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
 [node name="Statsbar" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -1187.0
+margin_bottom = -684.0
 script = ExtResource( 3 )
 
 [node name="Panel" type="Panel" parent="."]
@@ -174,6 +198,20 @@ align = 0
 icon_align = 2
 expand_icon = true
 
+[node name="toEndGameBtn" type="Button" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 256.5
+margin_top = 19.0
+margin_right = 507.5
+margin_bottom = 83.0
+theme = ExtResource( 1 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 3 )
+text = "Continue"
+
 [node name="qnLblTimer" type="Timer" parent="."]
 wait_time = 7.0
 one_shot = true
@@ -185,5 +223,6 @@ autostart = true
 
 [connection signal="pressed" from="Panel/pauseBtn" to="." method="_on_pauseBtn_pressed"]
 [connection signal="pressed" from="Panel/question/togBtn" to="." method="_on_togBtn_pressed"]
+[connection signal="pressed" from="Panel/toEndGameBtn" to="." method="_on_toEndGameBtn_pressed"]
 [connection signal="timeout" from="qnLblTimer" to="." method="_on_qnLblTimer_timeout"]
 [connection signal="timeout" from="playerTimer" to="." method="_on_playerTimer_timeout"]

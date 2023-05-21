@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed = 350
+var speed = 1000
 var velocity = Vector2()
 
 func _process(delta):
@@ -49,4 +49,5 @@ func _on_right_released():
 
 
 func _on_actionBtn_pressed():
+	Input.action_press("action")
 	Global.action_pressed = true

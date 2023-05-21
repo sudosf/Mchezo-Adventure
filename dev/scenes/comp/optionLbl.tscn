@@ -30,6 +30,9 @@ align = 1
 valign = 1
 
 [node name="description" parent="." instance=ExtResource( 3 )]
+margin_top = -56.0
+margin_right = 339.0
+margin_bottom = 1.0
 text = "Touch / Press \"E\" to select answer"
 
 [node name="actionBtn" type="Button" parent="."]

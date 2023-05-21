@@ -12,10 +12,14 @@ var time_mins
 
 func _ready():
 	$Panel/pauseMenu.visible = false
+	$Panel/toEndGameBtn.visible = false
 	minutes = Global.timer_mins
 
 func _process(delta):
 	update_countdown()
+	
+	if Global.q3_complete:
+		$Panel/toEndGameBtn.visible = true
 	
 	if Input.is_action_just_pressed("pause"):
 		toggle_pause()
@@ -32,7 +36,7 @@ func _process(delta):
 	$Panel/updates.text = Global.updateLbl
 	$Panel/score.text = "Score: " + str(Global.score)
 	$Panel/powerups.text = "Power-ups: " + str(Global.power_ups)
-	$Panel/questions.text = "Questions: " + str(Global.questions_complete) + "/" + str(Global.total_questions)
+	$Panel/questions.text = "Clues solved: " + str(Global.questions_complete) + "/" + str(Global.total_questions)
 
 func toggle_pause():
 	if Global.is_paused:
@@ -83,3 +87,7 @@ func _on_qnLblTimer_timeout():
 
 func _on_playerTimer_timeout():
 	dsec -= 1
+
+
+func _on_toEndGameBtn_pressed():
+	Global.set_gameover()

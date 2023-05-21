@@ -12,6 +12,7 @@ extents = Vector2( 35, 81 )
 script = ExtResource( 3 )
 
 [node name="Room" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40, 81 )
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource( 1 )]
 stream = ExtResource( 4 )
