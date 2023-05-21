@@ -12,12 +12,14 @@ func _process(delta):
 	toggle_lamp()
 	
 	# activate next queation
-	if Input.is_action_pressed("action") and player_entered:
-		set_next_qn()
+	if Input.is_action_just_pressed("action") and player_entered:
 		Global.lamp_active = false
 		Global.arrow_active = false
 		$description.visible = false
+		set_next_qn()
 		Global.curr_question_set = true
+		player_entered = false
+		
 		
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":
@@ -32,7 +34,7 @@ func _on_Area2D_body_exited(body):
 		player_entered = false
 
 func set_next_qn():
-	Global.qn_type = "Quest"
+	Global.qn_type = "Mission"
 	Global.update_qnLbl()
 
 func toggle_lamp():

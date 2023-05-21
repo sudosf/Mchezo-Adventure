@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/MandelaSquareMap.png" type="Texture" id=1]
 [ext_resource path="res://dev/scripts/level_1.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/img/gold.svg" type="Texture" id=8]
 [ext_resource path="res://dev/scenes/comp/power_up.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/img/floor-texture-d-texture.jpg" type="Texture" id=10]
+[ext_resource path="res://dev/scenes/comp/optionLbl.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 550.75, 271.5 )
@@ -95,6 +96,36 @@ script = null
 position = Vector2( -446, 77 )
 script = null
 
+[node name="q2_city" type="Control" parent="."]
+margin_left = 2155.0
+margin_top = 1934.0
+margin_right = 3322.0
+margin_bottom = 2435.0
+
+[node name="optionLbl" parent="q2_city" instance=ExtResource( 11 )]
+position = Vector2( 127, 126 )
+
+[node name="answer" parent="q2_city/optionLbl" index="1"]
+text = "Durban"
+
+[node name="optionLbl2" parent="q2_city" instance=ExtResource( 11 )]
+position = Vector2( 545, 171 )
+
+[node name="answer" parent="q2_city/optionLbl2" index="1"]
+text = "Jozi"
+
+[node name="optionLbl3" parent="q2_city" instance=ExtResource( 11 )]
+position = Vector2( 1009, 249 )
+
+[node name="answer" parent="q2_city/optionLbl3" index="1"]
+text = "Mchezo"
+
+[node name="optionLbl4" parent="q2_city" instance=ExtResource( 11 )]
+position = Vector2( 986, 23 )
+
+[node name="answer" parent="q2_city/optionLbl4" index="1"]
+text = "Karro"
+
 [node name="kota" parent="." instance=ExtResource( 9 )]
 position = Vector2( 343, 506 )
 
@@ -167,5 +198,9 @@ shape = SubResource( 4 )
 [connection signal="body_entered" from="q1_landmark" to="." method="_on_q1_landmark_body_entered"]
 [connection signal="body_exited" from="q1_landmark" to="." method="_on_q1_landmark_body_exited"]
 
+[editable path="q2_city/optionLbl"]
+[editable path="q2_city/optionLbl2"]
+[editable path="q2_city/optionLbl3"]
+[editable path="q2_city/optionLbl4"]
 [editable path="gold"]
 [editable path="gold2"]

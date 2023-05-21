@@ -20,7 +20,9 @@ var arrow_active = true
 # list on questions
 # order determines how they will be asked
 var questions = [
-	{"qn": "find the prominent landmark by exploring the area, Press 'Enter' once you found it"}
+	{"question": "find the prominent landmark by exploring the area, Press 'Enter' once you found it", "answer": "none"},
+	{"question": "What is the nickname of Johannesburg? explore to find the answer", "answer": "Jozi"},
+	{"question": "Which is the most prominent mode of transportation? explore and find the correct vehicle", "answer": "quatum"}
 ]
 
 var hide_qnLbl: bool = false
@@ -28,17 +30,31 @@ var hide_qnLbl: bool = false
 var curr_question_set: bool = false
 var total_questions = 3
 var qn_type = "Mission"
-var intial_question = "go to the station post to get your first assignment"
+
+var correct_answer = "none"
+var initial_question = "go to the station post to get your next mission"
+
+var curr_question_num = 1
 var curr_question
 
+var q2_complete: bool = false
+var q2_attempts = 0
 
 func _ready():
-	curr_question = intial_question
+	curr_question = initial_question
 
 func update_qnLbl():
-	for obj in questions:
-		var qn = obj["qn"]
-		curr_question = qn
-		questions.erase(obj)
-		print(questions)
-		break
+	if !curr_question_set:
+		for obj in questions:
+			curr_question = obj["question"]
+			correct_answer = obj["answer"]
+			questions.erase(obj)
+			print(correct_answer)
+			break
+
+func reset_station():
+		# question complete, set next one
+		Global.lamp_active = true
+		Global.curr_question = Global.initial_question
+		Global.curr_question_set = false
+		Global.arrow_active = true

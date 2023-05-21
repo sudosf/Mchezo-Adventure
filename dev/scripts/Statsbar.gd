@@ -12,30 +12,10 @@ var time_mins
 
 func _ready():
 	$Panel/pauseMenu.visible = false
-	
 	minutes = Global.timer_mins
 
 func _process(delta):
-	if seconds > 0 and dsec <= 0:
-		seconds -= 1
-		dsec = 10
-	
-	if minutes > 0 and seconds <= 0:
-		minutes -= 1
-		seconds = 60
-	
-	if minutes >= 10:
-		time_mins = str(minutes)
-	else: time_mins = "0" + str(minutes)
-	
-	if seconds >= 10:
-		time_secs = str(seconds)
-	else: time_secs = "0" + str(seconds)
-	
-	timerLbl.text = time_mins + " : " + time_secs
-	
-	if seconds == 0:
-		print("time is out!")
+	update_countdown()
 	
 	if Input.is_action_just_pressed("pause"):
 		toggle_pause()
@@ -57,16 +37,38 @@ func toggle_pause():
 	if Global.is_paused:
 		$Panel/pauseMenu.visible = false
 		Global.is_paused = false
-		$"/root/BackgroundMusic".stop()
+		# $"/root/BackgroundMusic".stop()
 		
 	else: 
 		$"/root/BackgroundMusic".play()
 		$Panel/pauseMenu.visible = true
 		Global.is_paused = true
-		
+
+func update_countdown():
+	if seconds > 0 and dsec <= 0:
+		seconds -= 1
+		dsec = 10
+	
+	if minutes > 0 and seconds <= 0:
+		minutes -= 1
+		seconds = 60
+	
+	if minutes >= 10:
+		time_mins = str(minutes)
+	else: time_mins = "0" + str(minutes)
+	
+	if seconds >= 10:
+		time_secs = str(seconds)
+	else: time_secs = "0" + str(seconds)
+	
+	timerLbl.text = time_mins + " : " + time_secs
+	
+	if seconds == 0:
+		print("time is out!")
+
 func _on_pauseBtn_pressed():
 	toggle_pause()
-
+	
 
 func _on_togBtn_pressed():
 	if qnLbl.visible:
