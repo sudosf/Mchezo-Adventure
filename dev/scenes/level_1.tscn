@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/MandelaSquareMap.png" type="Texture" id=1]
 [ext_resource path="res://dev/scripts/level_1.gd" type="Script" id=2]
@@ -12,6 +12,15 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 550.75, 271.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 395.5, 1920.25 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 395.5, 1920.25 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 3245, 812.125 )
 
 [node name="Room" type="Node2D"]
 script = ExtResource( 2 )
@@ -86,22 +95,68 @@ position = Vector2( -446, 77 )
 script = null
 
 [node name="kota" parent="." instance=ExtResource( 9 )]
-position = Vector2( 4550, 1297 )
+position = Vector2( 343, 506 )
 
 [node name="gold" parent="." instance=ExtResource( 9 )]
 position = Vector2( -841, 2129 )
 
+[node name="CollisionShape2D" parent="gold" index="0"]
+position = Vector2( 2603, 50 )
+
 [node name="TextureRect" parent="gold" index="1"]
+margin_left = 2514.0
+margin_top = -45.0
+margin_right = 2690.0
+margin_bottom = 104.0
 texture = ExtResource( 8 )
 
+[node name="CollisionShape2D" parent="gold/Area2D" index="0"]
+position = Vector2( 2585, 38 )
+
+[node name="collectSound" parent="gold" index="4"]
+position = Vector2( 2601, 48 )
+
 [node name="kota2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 4312, 2960 )
+position = Vector2( 2797, 1362 )
 
 [node name="gold2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 3576, -315 )
 
+[node name="CollisionShape2D" parent="gold2" index="0"]
+position = Vector2( -294, 632 )
+
 [node name="TextureRect" parent="gold2" index="1"]
+margin_left = -396.0
+margin_top = 539.0
+margin_right = -220.0
+margin_bottom = 688.0
 texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" parent="gold2/Area2D" index="0"]
+position = Vector2( -308, 625 )
+
+[node name="collectSound" parent="gold2" index="4"]
+position = Vector2( -264, 647 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2( -1341, 575 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 581, 689 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 5279, 763 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3301, 2721 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3394, -1420 )
+shape = SubResource( 4 )
 
 [connection signal="body_entered" from="q1_landmark" to="." method="_on_q1_landmark_body_entered"]
 [connection signal="body_exited" from="q1_landmark" to="." method="_on_q1_landmark_body_exited"]
