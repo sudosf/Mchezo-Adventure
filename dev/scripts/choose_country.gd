@@ -21,4 +21,4 @@ func _on_Johannesburg_pressed():
 	$AudioStreamPlayer.play()
 	yield($AudioStreamPlayer, "finished")
 	# $"/root/BackgroundMusic".stop()
-	get_tree().change_scene("res://dev/scenes/main_room.tscn")
+	get_tree().change_scene("res://dev/scenes/TileMap.tscn")

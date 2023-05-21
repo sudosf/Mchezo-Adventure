@@ -28,7 +28,7 @@ bg_color = Color( 0.768627, 0.768627, 0.768627, 1 )
 script = ExtResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 1345.0
+margin_right = 1407.0
 margin_bottom = 712.0
 texture = ExtResource( 2 )
 expand = true
