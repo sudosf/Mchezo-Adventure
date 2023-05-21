@@ -18,13 +18,10 @@ func _process(delta):
 		
 
 		self.visible = false
-<<<<<<< HEAD
 		$collectSound.play()
 		yield($collectSound, "finished")
-		self.position = Vector2(5000, 5000) # remove from scene
-=======
+		
 		self.position = Global.pos_offset # remove from scene
->>>>>>> 2a57979 (bug fixes and finishing touches)
 		Global.updateLbl = "Status: power up collected!"
 		Global.power_ups += 1
 		Global.score += 5
