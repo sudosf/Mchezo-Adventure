@@ -158,17 +158,17 @@ text = "polo"
 [node name="kota" parent="." instance=ExtResource( 9 )]
 position = Vector2( 343, 506 )
 
-[node name="kota2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 2797, 1362 )
-
 [node name="gold" parent="." instance=ExtResource( 9 )]
 position = Vector2( 3087, 183 )
 
 [node name="TextureRect" parent="gold" index="1"]
 texture = ExtResource( 8 )
 
+[node name="kota2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2950, 1338 )
+
 [node name="gold2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 2704, 2370 )
+position = Vector2( 2694, 2347 )
 
 [node name="TextureRect" parent="gold2" index="1"]
 texture = ExtResource( 8 )

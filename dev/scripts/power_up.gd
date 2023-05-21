@@ -18,8 +18,8 @@ func _process(delta):
 		self.visible = false
 		self.position = Vector2(5000, 5000) # remove from scene
 		Global.updateLbl = "Status: power up collected!"
-		Global.power_ups += 0.5
-		Global.score += 2.5
+		Global.power_ups += 1
+		Global.score += 5
 
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":
