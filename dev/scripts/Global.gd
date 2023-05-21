@@ -22,7 +22,7 @@ var arrow_active = true
 var questions = [
 	{"question": "find the prominent landmark by exploring the area, Press 'Enter' once you found it", "answer": "none"},
 	{"question": "What is the nickname of Johannesburg? explore to find the answer", "answer": "Jozi"},
-	{"question": "Which is the most prominent mode of transportation? explore and find the correct vehicle", "answer": "quatum"}
+	{"question": "Which is the most prominent mode of transportation? explore and find the correct vehicle", "answer": "mini-taxi"}
 ]
 
 var hide_qnLbl: bool = false
@@ -40,10 +40,18 @@ var curr_question
 var q2_complete: bool = false
 var q2_attempts = 0
 
+var q3_complete: bool = false
+
 func _ready():
 	curr_question = initial_question
 
 func update_qnLbl():
+	if q3_complete:
+		updateLbl = "Status: demo complete"
+		Global.curr_question = "all questions answered"
+		Global.arrow_active = false
+		Global.lamp_active = false
+		
 	if !curr_question_set:
 		for obj in questions:
 			curr_question = obj["question"]

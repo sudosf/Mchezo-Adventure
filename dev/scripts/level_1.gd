@@ -11,6 +11,7 @@ var house_positions = [
 ]
 
 var q2_original_pos 
+var q3_original_pos 
 
 var timer = Timer.new()
 var timer_started = false
@@ -22,6 +23,10 @@ func _ready():
 	q2_original_pos = $q2_city.rect_position
 	$q2_city.rect_position = Vector2(4000, 4000)
 	$q2_city.visible = false
+	
+	q3_original_pos = $q3_car.rect_position
+	$q3_car.rect_position = Vector2(7000, 7000)
+	$q3_car.visible = false
 	
 	timer.connect("timeout",self,"finish_q2")
 	timer.wait_time = 1
@@ -59,9 +64,15 @@ func set_q2():
 	$q2_city.rect_position = q2_original_pos
 	$q2_city.visible = true
 
+func set_q3():
+	$q3_car.rect_position = q3_original_pos
+	$q3_car.visible = true
+
 func finish_q2():
 	print("showing del 2")
 	Global.q2_complete = false
+	Global.reset_station()
+	set_q3()
 
 func _on_q1_landmark_body_entered(body):
 	if Global.curr_question_set:
